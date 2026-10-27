@@ -10,6 +10,10 @@
 装在 DSH 里，改的是**发出去的那一份请求体**：不碰宿主安装目录、不改权重、不要 API key。
 被拒一次不会结束，它会换一层再试一次。
 
+> DSH `0.2.1-rc.3` 的 `deepseek-account` / `deepseek-official` 使用 Messages 接口：
+> 请求体整形改用文本 prefill；在 thinking 模式下保留历史 thinking 和附件，
+> 暂时关闭不兼容的 many-shot、历史拒答擦除和推理擦除。详见 [更新日志](CHANGELOG.md#unreleased)。
+
 ## 先说清楚它在干什么
 
 大模型被问到一个「它不想答」的问题时，不是先想完内容再决定说不说 ——
